@@ -1,0 +1,10 @@
+.action {
+    background-color: #0062b9;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    padding: auto 2rem;
+}
+.action:hover {
+    background-color: #5badf5;
+}
