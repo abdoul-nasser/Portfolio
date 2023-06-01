@@ -8,3 +8,12 @@
 .action:hover {
     background-color: #5badf5;
 }
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.enfant {
+    flex: 1 1 40%;
+    margin-right: 4%;
+}
