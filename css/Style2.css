@@ -17,9 +17,6 @@
     flex: 1 1 40%;
     margin-right: 4%;
 }
-.enfant:hover {
-    background-color: #cbe7ff;
-}
 .center-cont {
     justify-content: start;
     align-items: flex-start;
@@ -29,6 +26,9 @@
 }
 .center-text {
     text-align: center;
+}
+.merge {
+    margin-top: 2rem;
 }
 .skilhov:hover {
     background-color: #0062b9;
