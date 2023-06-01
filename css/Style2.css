@@ -17,3 +17,13 @@
     flex: 1 1 40%;
     margin-right: 4%;
 }
+.center-cont {
+    justify-content: start;
+    align-items: flex-start;
+}
+.justify {
+    text-align: justify;
+}
+.center-text {
+    text-align: center;
+}
