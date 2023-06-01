@@ -17,6 +17,9 @@
     flex: 1 1 40%;
     margin-right: 4%;
 }
+.enfant:hover {
+    background-color: #cbe7ff;
+}
 .center-cont {
     justify-content: start;
     align-items: flex-start;
@@ -45,9 +48,8 @@
 
 .skills-scrol::-webkit-scrollbar {
 	width: 12px;
-	background-color: #F5F5F5;
+	background-color: #e4e4e4;
 }
-
 .skills-scrol::-webkit-scrollbar-thumb {
 	border-radius: 1px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
