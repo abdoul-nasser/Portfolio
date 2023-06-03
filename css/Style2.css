@@ -17,6 +17,17 @@
     flex: 1 1 43%;
     margin-right: 4%;
 }
+@media only screen and (max-width: 768px) {
+    .parent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .enfant {
+        flex: 1 1 90%;
+        margin-right: 0;
+    }
+  }
 .center-cont {
     justify-content: start;
     align-items: flex-start;
