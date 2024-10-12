@@ -1,21 +1,37 @@
 .action {
     background-color: #0062b9;
-    border-radius: 8px;
+    border-radius: 4px;
     color: #fff;
-    font-weight: 500;
-    padding: auto 2rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
 }
 .action:hover {
-    background-color: #5badf5;
+    background-color: #107cdc;
+    color: #f1f1f1;
 }
 .parent {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.logo-couronne {
+    border-width: 3.5px;
+    border-color: #0062b9;
+    border-style: solid;
+}
+.footer-infor {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
 .enfant {
     flex: 1 1 43%;
     margin-right: 4%;
+}
+.img-size {
+    height: 30rem;
+    max-height: 30rem; 
+    overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
     .parent {
@@ -40,6 +56,9 @@
 }
 .merge {
     margin-top: 2rem;
+}
+.skilhov {
+    padding: 0.7rem 1.5rem;
 }
 .skilhov:hover {
     background-color: #0062b9;

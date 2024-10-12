@@ -444,7 +444,7 @@ textarea {
 
 .project-details__showcase-img-cont {
   width: 100%;
-  margin-bottom: 6rem; }
+  margin-bottom: 4rem; }
 
 .project-details__showcase-img {
   width: 100%; }
@@ -645,15 +645,14 @@ textarea {
     .main-footer__icon--mr-none {
       margin-right: 0; }
   .main-footer__lower {
-    padding: 4rem 0;
+    padding: 1rem 0;
     border-top: 1px solid #444;
     color: #eee;
-    font-size: 1.2rem;
+    font-size: 0.875rem;
     text-align: left;
     text-align: center; }
     .main-footer__lower a {
-      text-decoration: underline;
-      font-weight: bold;
+      font-weight: 300;
       margin-left: 2px; }
     @media only screen and (max-width: 56.25em) {
       .main-footer__lower {
