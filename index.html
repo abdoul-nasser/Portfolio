@@ -303,25 +303,32 @@
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
+          <form id="contactForm" action="#" class="contact__form">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
-              <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name"
+              <input required placeholder="Enter Your Name" type="text" class="contact__form-input contactinput" name="name"
                 id="name" />
             </div>
             <div class="contact__form-field">
               <label class="contact__form-label" for="email">Email</label>
-              <input required placeholder="Enter Your Email" type="text" class="contact__form-input" name="email"
+              <input required placeholder="Enter Your Email" type="text" class="contact__form-input contactinput" name="email"
                 id="email" />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="phone">Email</label>
+              <input required placeholder="Enter Your phone" type="phone" class="contact__form-input contactinput" name="phone"
+                id="phone" />
             </div>
             <div class="contact__form-field">
               <label class="contact__form-label" for="message">Message</label>
               <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message"
                 name="message" id="message"></textarea>
             </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
+            <div class=" d-flex">
+              <button type="submit" class="btn btn--theme contact__btn mx-auto">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -380,10 +387,47 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery-migrate.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Importation de EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   
   <!-- JS Front -->
   <script src="assets/js/hs.core.js"></script>
   <script src="assets/js/script.js"></script>
+
+  <script>
+    //Importation de EmailJS
+    (function(){
+        emailjs.init("OKrvm6duLRwNww8Sa");
+      })();
+  </script>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.send("service_fgqzjjv", "template_7xkptil", {
+        first_name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+      }).then(function(response) {
+          let resultElement = document.getElementById('result');
+          if (resultElement) {
+              resultElement.innerText = "Message envoyé avec succès!";
+          }
+          console.log("Email envoyé:", response);
+          document.getElementById('contactForm').reset();
+      }, function(error) {
+          let resultElement = document.getElementById('result');
+          if (resultElement) {
+              resultElement.innerText = "Erreur lors de l'envoi.";
+          }
+          console.log("Erreur:", error);
+      });
+    });
+
+  </script>
 
 </body>
 

@@ -85,3 +85,9 @@
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #858585;
 }
+.contact__form-field {
+    margin-bottom: 1rem;
+}
+.contactinput{
+    max-height: 1rem;
+}
